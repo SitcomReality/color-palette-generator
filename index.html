@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "chroma-js": "https://cdn.jsdelivr.net/npm/chroma-js@2.4.2/chroma.min.js"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Color Palette Generator</h1>
+        
+        <div class="input-container">
+            <div class="color-picker-wrapper">
+                <input type="color" id="colorPicker" value="#4287f5">
+                <span id="colorValue">#4287f5</span>
+            </div>
+            
+            <div class="harmony-selector">
+                <label for="harmonyType">Harmony Type:</label>
+                <select id="harmonyType">
+                    <option value="complementary">Complementary</option>
+                    <option value="analogous">Analogous</option>
+                    <option value="triadic">Triadic</option>
+                    <option value="tetradic">Tetradic</option>
+                    <option value="monochromatic">Monochromatic</option>
+                    <option value="splitComplementary">Split Complementary</option>
+                </select>
+            </div>
+            
+            <button id="generateBtn">Generate Palette</button>
+        </div>
+        
+        <div class="palette-container" id="paletteContainer">
+            <!-- Color swatches will be added here dynamically -->
+        </div>
+    </div>
+    
+    <script type="module" src="app.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
